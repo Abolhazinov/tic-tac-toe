@@ -16,9 +16,6 @@ export default function Board() {
   const [squares, setSquares] = useState(Array(9).fill(null));
   const [modalActive, setModalActive] = useState(false);
   const [showButton, setShowButton] = useState(true);
-  //const toggleButton = () => {
-  //  setShowButton(!showButton);
-  //};
 
   function handleClick(i) {
     if (squares[i] || calculateWinner(squares)) {
@@ -70,8 +67,8 @@ export default function Board() {
           <div className="modal-content">
             <h2>Choose who turns first</h2>
             <div className="button-container">
-              <button className="choice-button x-button" onClick={() => {setModalActive(false); setShowButton(!showButton); setxIsNext(true);}}>X</button>
-              <button className="choice-button o-button" onClick={() => {setModalActive(false); setShowButton(!showButton); setxIsNext(false);}}>O</button>
+              <button className="choice-button x-button" onClick={() => {setModalActive(false); setShowButton(false); setxIsNext(true);}}>X</button>
+              <button className="choice-button o-button" onClick={() => {setModalActive(false); setShowButton(false); setxIsNext(false);}}>O</button>
             </div>
           </div>
         </Modal>
