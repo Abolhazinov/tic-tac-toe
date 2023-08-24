@@ -1,0 +1,8 @@
+.arena{
+    display: flex;
+    flex-direction: row;
+
+}
+.arena-item{
+    margin: 0 50px;
+}
